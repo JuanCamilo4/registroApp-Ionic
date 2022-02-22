@@ -1,0 +1,62 @@
+<mat-sidenav-container fullscreen>
+    <mat-sidenav #sidenav mode="push">
+        <mat-toolbar>
+            <span>Menú</span>
+
+            <span class="spacer"></span>
+        </mat-toolbar>
+
+        <mat-nav-list>
+            <a routerLink="./listado"
+                mat-list-item
+                (click)="sidenav.toggle()"
+                (click)="hacerInvisible()">
+                <mat-icon mat-list-icon>label</mat-icon>
+                Listado de personas
+            </a>
+
+            <a routerLink="./agregar"
+                mat-list-item
+                (click)="sidenav.toggle()"
+                (click)="hacerInvisible()">
+                <mat-icon mat-list-icon>add</mat-icon>
+                Agregar usuario
+            </a>
+
+            <a routerLink="./buscar"
+                mat-list-item
+                (click)="sidenav.toggle()"
+                (click)="hacerInvisible()">
+                <mat-icon mat-list-icon>search</mat-icon>
+                Buscar usuario
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-toolbar>
+        <button mat-icon-button
+                (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <button mat-raised-button
+                routerLink="/"
+                (click)="hacerVisible()">
+                Home
+        </button>
+    </mat-toolbar>
+
+    <div class="container">
+
+        <h1 class="titleApp">Gestión de usuarios</h1>
+
+        <hr>
+
+        <div class="container-welcome" *ngIf="visible">
+            Bienvenido al sistema de gestión de personal de VE&CO
+        </div>
+
+        <router-outlet></router-outlet>    
+    </div>
+
+</mat-sidenav-container>

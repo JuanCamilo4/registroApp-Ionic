@@ -1,0 +1,50 @@
+<main>
+  <div class="container-filter">
+      <h2>Listado de personas</h2>
+
+      <div class="header-button">
+        <button mat-raised-button
+              color="primary"
+              (click)="cambiarOrden()"
+              title="Puede ordenar los resultado según el sexo">
+          Filtrar por sexo
+          <mat-icon>sort</mat-icon>
+        </button>
+
+        <a mat-raised-button
+                href="/agregar"
+                color="accent">
+            Agregar persona
+            <mat-icon>add</mat-icon>
+        </a>
+      </div>
+  </div>
+
+  <div class="container-personas">
+    <div class="persona" *ngFor="let persona of personas | ordenar:cambiarOrdenPipe">
+      <h3><b>Nombre Completo:</b></h3>
+      <p>{{persona.nombre}}</p>
+
+      <h3><b>Fecha de nacimiento:</b></h3>
+      <p>{{persona.fecha_nacimiento | date:'MMMM dd, yyyy'}}</p>
+
+      <h3><b>Sexo</b></h3>
+      <p>{{persona.sexo}}</p>
+
+      <mat-divider></mat-divider>
+
+      <div class="container-button">
+        <button mat-raised-button
+                color="accent"
+                [routerLink]="['/agregar/', persona.id]">
+          Editar
+        </button>
+        <button mat-raised-button
+                color="warn"
+                (click)="deletePersona(persona.id)">
+          Eliminar
+        </button>
+      </div>
+    </div>
+  </div>
+</main>

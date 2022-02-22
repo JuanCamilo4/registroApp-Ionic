@@ -1,0 +1,67 @@
+<div class="container-add">
+    <h2>Agregar Usuario</h2>
+
+    <mat-divider></mat-divider>
+    
+    <div class="container-register">
+        <div class="container-form">
+            <div>
+                <p>
+                    <mat-form-field appearance="outline" class="form-input">
+                        <mat-label>Nombre completo del usuario</mat-label>
+                        <input matInput [(ngModel)]="persona.nombre" placeholder="nombre" required>
+                        <mat-hint>Obligatorio*</mat-hint>
+                    </mat-form-field>
+                </p>
+                <p>
+                    <mat-form-field appearance="outline" class="form-input">
+                        <mat-label>Fecha de nacimiento</mat-label>
+                        <input type="date" 
+                                [(ngModel)]="persona.fecha_nacimiento" 
+                                matInput 
+                                placeholder="Fecha" 
+                                required
+                                [max]="fechaFormato"
+                                value="04/04/2001">
+                        <mat-hint>Obligatorio*</mat-hint>
+                    </mat-form-field>
+                </p>
+            </div>
+            <mat-form-field appearance="fill" class="form-input">
+                <mat-label>Genero</mat-label>
+                <mat-select [(ngModel)]="persona.sexo" name="">
+                  <mat-option *ngFor="let genero of generos" [value]="genero" required>
+                    {{genero}}
+                  </mat-option>
+                </mat-select>
+                <mat-hint>Obligatorio*</mat-hint>
+            </mat-form-field>
+    
+            <br>
+            
+            <button mat-raised-button 
+                    color="primary"
+                    (click)="guardar()">
+                Registrar o Actualizar usuario    
+            </button>
+
+            <a mat-raised-button
+                    href="/listado" 
+                    color="accent">
+                Volver a inicio   
+            </a>
+        </div>
+        
+        <mat-divider></mat-divider>
+
+        <div class="info-user" *ngIf="guardado">
+            <h3>Datos guardados</h3>
+            <mat-divider></mat-divider>
+
+            <p>Nombre: {{persona.nombre}}</p>
+            <p>Fecha de nacimiento: {{persona.fecha_nacimiento}}</p>
+            <p>Sexo: {{persona.sexo}}</p>
+
+        </div>
+    </div>    
+</div>

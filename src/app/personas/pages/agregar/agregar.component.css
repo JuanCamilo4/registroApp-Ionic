@@ -1,0 +1,35 @@
+main{
+    background-color: #000000 !important;
+    transform: translateY(-1rem) !important;
+    height: 100vh !important;
+}
+button{
+    margin-top: 1.3rem;
+}
+mat-divider{
+    margin-bottom: 1.5rem;
+}
+a{
+    margin-top: 1rem;
+}
+.container-add{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+.container-form input{
+    width: 10rem;
+}
+.form-input{
+    width: 18rem;
+    margin-bottom: 1rem;
+}
+.info-user{
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 5px;
+    padding: 1.2rem;
+    box-sizing: border-box;
+}
+.info-user p{
+    font-size: 1.1rem;
+}

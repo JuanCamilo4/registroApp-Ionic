@@ -1,0 +1,34 @@
+{
+  "personas": [
+    {
+      "id": 1,
+      "nombre": "Juan Camilo Rios Tarazona",
+      "fecha_nacimiento": "2001-04-01",
+      "sexo": "masculino"
+    },
+    {
+      "id": 2,
+      "nombre": "Julie",
+      "fecha_nacimiento": "2022-02-02",
+      "sexo": "femenino"
+    },
+    {
+      "id": 3,
+      "nombre": "Edgar",
+      "fecha_nacimiento": "2022-02-07",
+      "sexo": "masculino"
+    },
+    {
+      "id": 4,
+      "nombre": "Maria",
+      "fecha_nacimiento": "2022-02-01",
+      "sexo": "femenino"
+    },
+    {
+      "id": 5,
+      "nombre": "sas",
+      "fecha_nacimiento": "2022-02-01",
+      "sexo": "masculino"
+    }
+  ]
+}

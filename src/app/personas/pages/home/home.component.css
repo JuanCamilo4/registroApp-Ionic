@@ -1,0 +1,25 @@
+.titleApp{
+    text-align: center;
+    margin: 2rem;
+    font-size: 2rem;
+}
+hr{
+    margin-bottom: 2rem;
+    width: 90%;
+}
+mat-toolbar{
+    display: flex;
+    justify-content: space-between;
+}
+.container-welcome{
+    width: 60%;
+    background-color: rgb(61, 61, 61);
+    color: rgb(228, 228, 228);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    height: 7rem;
+    font-size: 1.2rem;
+}

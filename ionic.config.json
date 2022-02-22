@@ -1,0 +1,7 @@
+{
+  "name": "registroApp-Ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
